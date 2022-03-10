@@ -27,6 +27,17 @@ function setCurrentSize(size) {
   currentSize = size;
 }
 
+function makeGrid(currentSize) {
+  grid.style.setProperty("--grid-rows", currentSize);
+  grid.style.setProperty("--grid-cols", currentSize);
+  for (c = 0; c < currentSize * currentSize; c++) {
+    let cell = document.createElement("div");
+    cell.classList.add("grid-item");
+    cell.addEventListener("mouseover", changeColor);
+    grid.appendChild(cell);
+  }
+}
+
 function clearGrid() {
   grid.innerHTML = "";
 }
@@ -71,17 +82,6 @@ eraserBtn.onclick = () => setCurrentMode("eraser");
 clearBtn.onclick = () => refreshGrid();
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
-
-function makeGrid(currentSize) {
-  grid.style.setProperty("--grid-rows", currentSize);
-  grid.style.setProperty("--grid-cols", currentSize);
-  for (c = 0; c < currentSize * currentSize; c++) {
-    let cell = document.createElement("div");
-    cell.classList.add("grid-item");
-    cell.addEventListener("mouseover", changeColor);
-    grid.appendChild(cell);
-  }
-}
 
 window.onload = () => {
   makeGrid(DEFAULT_SIZE);
