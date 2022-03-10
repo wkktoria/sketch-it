@@ -87,6 +87,7 @@ input[type="color"]::-webkit-color-swatch {
 /* FOOTER */
 
 .footer {
+  background-color: #d3d3d3;
   margin-top: auto;
   padding: 15px;
 }
@@ -120,11 +121,6 @@ input {
   border: none;
   width: 80px;
   height: 30px;
-}
-
-.header,
-.footer {
-  background-color: #d3d3d3;
 }
 
 /* MEDIA QUERIES */
