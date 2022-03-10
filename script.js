@@ -50,9 +50,13 @@ function getRandomValue() {
   return Math.floor(Math.random() * (255 - 0 + 1));
 }
 
+function getRandomColor() {
+  return `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
+}
+
 function changeColor(e) {
   if (currentMode == "rainbow") {
-    e.target.style.backgroundColor = `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
+    e.target.style.backgroundColor = `${getRandomColor()}`;
   } else if (currentMode == "color") {
     e.target.style.backgroundColor = currentColor;
   } else if (currentMode === "eraser") {
