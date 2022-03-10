@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sketch It</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">SKETCH IT</h1>
+    </header>
+
+    <div class="sketch">
+      <div class="sketch-sub-container">
+        <div class="settings">
+          <input id="picker" type="color" value="#333333" />
+          <button id="colorBtn">Color</button>
+          <button id="rainbowBtn">Rainbow</button>
+          <button id="eraserBtn">Eraser</button>
+          <button id="clearBtn">Clear</button>
+          <div class="slider-container">
+            <label for="slider" id="sizeValue" class="size-value"
+              >16 x 16</label
+            >
+            <input
+              id="sizeSlider"
+              class="size-slider"
+              name="slider"
+              type="range"
+              value="16"
+              min="1"
+              max="64"
+            />
+          </div>
+        </div>
+        <div class="grid-container" id="grid-container"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a href="https://github.com/wkktoria"> @wkktoria </a>
+    </footer>
+  </body>
+</html>
